@@ -1,6 +1,7 @@
 [Virtualenv Basics](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
 [More advanced](https://realpython.com/blog/python/python-virtual-environments-a-primer/)
 
+more resources: [blog](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
 
 
 ```shell
@@ -13,7 +14,7 @@ pip install virtualenvwrapper # helps you manage virtual environments.
 export WORKON_HOME=$HOME/.virtualenvs   # optional
 export PROJECT_HOME=$HOME/projects      # optional
 # path you get from which virtualenvwrapper.sh
-sourceµ /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
+source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
 
 cd my_project_folder # go to wherever you want to start your project, or whereever your project is located.
 
@@ -28,7 +29,9 @@ source my_project/bin/activate # activate your virtual env.
 pip install requests # install requests in your virtual env.
 
 # others
-deactivate # deactivate your env.
-workon # lists all your envs.
-pip list # list your packages.
+mkvirtualenv my_project # create env.
+workon                  # lists all your envs.
+workon my_project       # activate the env.
+deactivate              # deactivate your env.
+rmvirtualenv my_project # remove env.
 ```
